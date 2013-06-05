@@ -1,0 +1,52 @@
+==============================
+Q2A Tag Descriptions
+==============================
+-----------
+Description
+-----------
+this plugin allows adding Tag Description for **Question2Answer**.
+this plugin was originally developed by `Gideon Greenspan`_ in `plugin development tutorial`_. I just added a few features that seemed to be necessary.
+.. _Gideon Greenspan: http://www.gidgreen.com/
+.. _plugin development tutorial: http://www.question2answer.org/plugins-tutorial.php
+--------
+New Features
+--------
+- adding Title while editing tag description(it will use this title instead of description in tag link's title attribute)
+- adding Icon while editing tag description(icon image will show up inside tag links, it's size can be set in admin options page)
+- it supports HTML in tag description(can be disabled in plugin option page)
+- css class "qa-tag-description" was added to tag's description container for easy styling
+
+------------
+Installation
+------------
+
+#. Download and extract the files to your plugins folder (e.g. `qa-plugins/q2a-tag-descriptions`).
+#. In Q2A go to **Admin > Plugins** and set the setting of "Q2A Tag Descriptions" and click '**save changes**'.
+#. In Q2A go to **Admin > Layout** add widget anywhere you want.
+#. Open any of your tags and click 'edit description' in the position you choose in last step, then add content and save it.
+-------------
+Author
+-------------
+Created by `Gideon Greenspan`_
+Improvements by `Towhid Nategheian`_ at QA-Themes_.
+
+.. _Towhid Nategheian: http://towhidn.com
+.. _QA-Themes: http://QA-Themes.com
+----------
+Disclaimer
+----------
+This is **beta code**. It worked fine for me, but may not work as you expect. if any problems accour get help on http://www.question2answer.org/qa/
+
+-------
+copyright
+-------
+this plugin and all it's source code is Copylefted_.
+
+.. _Copylefted: http://en.wikipedia.org/wiki/Copyleft
+
+---------
+About q2A
+---------
+Question2Answer is a free and open source platform for Q&A sites. For more information, visit:
+
+http://www.question2answer.org/
