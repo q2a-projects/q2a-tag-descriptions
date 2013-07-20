@@ -39,27 +39,30 @@ class qa_tag_descriptions_edit_page {
 			
 			'style' => 'tall', // could be 'wide'
 			
-			'fields' => array(				
-				
+			
+			'fields' => array(		
 				array(
+					'label' => 'Title:',
 					'type' => 'text',
 					'rows' => 2,
 					'tags' => 'NAME="tagtitle" ID="tagtitle"',
 					'value' => qa_html(qa_db_tagmeta_get($tag, 'title')),
 				),
 				array(
+					'label' => 'Description:',
 					'type' => 'text',
 					'rows' => 4,
 					'tags' => 'NAME="tagdesc" ID="tagdesc"',
 					'value' => qa_html(qa_db_tagmeta_get($tag, 'description')),
 				),
 				array(
+					'label' => 'Icon image:',
 					'type' => 'text',
+					'rows' => 1,
 					'tags' => 'NAME="tagicon" ID="tagicon"',
 					'value' => qa_html(qa_db_tagmeta_get($tag, 'icon')),
-				),	
-			),
-			
+				),
+			),			
 			'buttons' => array(
 				array(
 					'tags' => 'NAME="dosave"',

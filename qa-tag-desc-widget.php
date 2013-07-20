@@ -1,10 +1,12 @@
 <?php
 
 class qa_tag_descriptions_widget {
+	
 	function allow_template($template)
 	{
 		return ($template=='tag');
 	}
+
 	function allow_region($region)
 	{
 		return true;

@@ -2,6 +2,7 @@
 
 class qa_html_theme_layer extends qa_html_theme_base
 {
+
 	function post_tag_item($taghtml, $class)
 	{
 		require_once QA_INCLUDE_DIR.'qa-util-string.php';
@@ -23,23 +24,25 @@ class qa_html_theme_layer extends qa_html_theme_base
 				if ($value['title']=='description') $plugin_tag_map[$value['tag']]['description'] = $value['content'];
 				if ($value['title']=='icon') $plugin_tag_map[$value['tag']]['icon'] = $value['content'];
 			}
-//var_dump($plugin_tag_map);
+			//var_dump($plugin_tag_map);
 		}
-
+		
 		if (preg_match('/,TAG_DESC,([^,]*),/', $taghtml, $matches)) {
 			$taglc=$matches[1];
 			$title=@$plugin_tag_map[$taglc]['title'];
 			$title=qa_shorten_string_line($title, qa_opt('plugin_tag_desc_max_len'));
 			$taghtml=str_replace($matches[0], qa_html($title), $taghtml);
 		}
-		if (preg_match('/,TAG_ICON,/', $taghtml, $matches)) {
+		if (preg_match('/,TAG_ICON,([^,]*),/', $taghtml, $matches)) {
+			$taglc=$matches[1];
+			$icon=@$plugin_tag_map[$taglc]['icon'];
+			$icon=qa_shorten_string_line($icon, qa_opt('plugin_tag_desc_max_len'));
 			if (@$plugin_tag_map[$taglc]['icon']!='')
 				{
-					$icon=$plugin_tag_map[$taglc]["icon"];
 					if (qa_opt('plugin_tag_desc_enable_icon'))
-						$size=' width="'.qa_opt('plugin_tag_desc_icon_width').'" height="'.qa_opt('plugin_tag_desc_icon_height').'"';
+						$size='width="'.qa_opt('plugin_tag_desc_icon_width').'" height="'.qa_opt('plugin_tag_desc_icon_height').'"';
 					else $size='';
-					$taghtml=str_replace($matches[0], '<img class="qa-tag-img" '.$size.'src="'.$icon.'">' , $taghtml);
+					$taghtml=str_replace($matches[0], '<img class="qa-tag-img" '.$size.' src="'.$icon.'">' , $taghtml);
 				}
 			else 
 				$taghtml=str_replace($matches[0], '' , $taghtml);

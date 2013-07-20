@@ -10,20 +10,16 @@ function qa_tag_html($tag, $microformats=false)
 	
 	$taglc=qa_strtolower($tag);
 	$plugin_tag_desc_list[$taglc]=true;
-
-	//echo '<pre>';
-	//var_dump($taghtml);
-	//echo $anglepos;
-	//echo '</pre>';
 	
 	$anglepos=strpos($taghtml, '>');
 	if ($anglepos!==false)
-		$taghtml=substr_replace($taghtml, ' TITLE=",TAG_DESC,'.$taglc.',"', $anglepos, 0);
-	$anglepos=strpos($taghtml, '>');
-		if ($anglepos!==false)
-		$taghtml=substr_replace($taghtml, ' ,TAG_ICON,', $anglepos+1, 0);
-
-	
-	
+	{	// it doesn't apply to "tags page", it must be added in next versions
+		if (qa_request()!='tags')
+		{
+			$taghtml=substr_replace($taghtml, ',TAG_ICON,'.$taglc.',' , $anglepos+1, 0);
+			$taghtml=substr_replace($taghtml, ' TITLE=",TAG_DESC,'.$taglc.',"', $anglepos, 0);
+		}
+	}
+	//var_dump($taghtml);
 	return $taghtml;
 }
