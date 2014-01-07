@@ -1,16 +1,16 @@
 <?php
 
 /*
-	Plugin Name: Tag Descriptions
+	Plugin Name: Advenced Tag Descriptions
 	Plugin URI: https://github.com/Towhidn/q2a-tag-descriptions
-	Plugin Description: Allows tag descriptions to be displayed
-	Plugin Version: 1.0
-	Plugin Date: 2013-13-06
-	Plugin Author: Question2Answer & QA-Themes.com
-	Plugin Author URI: http://www.question2answer.org/
+	Plugin Description: Allows tag descriptions with images and titles to be displayed
+	Plugin Version: 1.1
+	Plugin Date: 2014-7-1
+	Plugin Author: QA-Themes.com
+	Plugin Author URI: http://qa-themes.com/
 	Plugin License: GPLv2
 	Plugin Minimum Question2Answer Version: 1.5
-	Plugin Update Check URI: 
+	Plugin Update Check URI: https://raw.github.com/Towhidn/q2a-tag-descriptions/master/qa-plugin.php
 */
 
 if (!defined('QA_VERSION')) { // don't allow this page to be requested directly from browser
@@ -36,7 +36,7 @@ qa_register_plugin_overrides('qa-tag-desc-overrides.php');
 
 qa_register_plugin_layer(
 	'qa-tag-desc-layer.php', // PHP file containing layer
-	'Tag Description Layer' // human-readable name of layer
+	'Tag Description Plugin Layer' // human-readable name of layer
 );
 
 qa_register_plugin_phrases(
