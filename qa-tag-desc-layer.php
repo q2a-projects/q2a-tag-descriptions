@@ -30,9 +30,9 @@ class qa_html_theme_layer extends qa_html_theme_base
 
 		foreach($html->getElementsByTagName('a') as $a)
         {
-			if (!empty(@$plugin_tag_map[$this->innerHTML($a)]['title']))
+			if (!empty($plugin_tag_map[$this->innerHTML($a)]['title']))
 				$a->setAttribute('title', $plugin_tag_map[$this->innerHTML($a)]['title']);
-			if (!empty(@$plugin_tag_map[$this->innerHTML($a)]['icon'])){
+			if (!empty($plugin_tag_map[$this->innerHTML($a)]['icon'])){
 				$element = $html->createElement('img');
 				$element->setAttribute('src',$plugin_tag_map[$this->innerHTML($a)]['icon']);
 				$element->setAttribute('class','qa-tag-img');
