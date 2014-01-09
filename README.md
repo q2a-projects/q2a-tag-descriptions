@@ -4,7 +4,7 @@
 this **Question2Answer** plugin allows adding HTML Description to Tag pages, and Title and icons to tag links.
 this plugin was originally developed by Gideon Greenspan in [plugin development tutorial](http://www.question2answer.org/plugins-tutorial.php). I just added a few cool features:
 
-#### New Features
+## New Features
 - adding Title to tags(it will use title text instead of description in tag link's title attribute)
 - adding Icon to tags(icon image will show up inside tag links, it's size can be set in admin options page)
 - it supports HTML in tag description(can be disabled in plugin option page), so you can add images, links, ... in each tag's page

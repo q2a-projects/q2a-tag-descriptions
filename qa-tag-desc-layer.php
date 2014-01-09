@@ -30,11 +30,11 @@ class qa_html_theme_layer extends qa_html_theme_base
 
 		foreach($html->getElementsByTagName('a') as $a)
         {
-			if (!empty($plugin_tag_map[$this->innerHTML($a)]['title']))
-				$a->setAttribute('title', $plugin_tag_map[$this->innerHTML($a)]['title']);
-			if (!empty($plugin_tag_map[$this->innerHTML($a)]['icon'])){
+			if (!empty($plugin_tag_map[$a->nodeValue]['title']))
+				$a->setAttribute('title', $plugin_tag_map[$a->nodeValue]['title']);
+			if (!empty($plugin_tag_map[$a->nodeValue]['icon'])){
 				$element = $html->createElement('img');
-				$element->setAttribute('src',$plugin_tag_map[$this->innerHTML($a)]['icon']);
+				$element->setAttribute('src',$plugin_tag_map[$a->nodeValue]['icon']);
 				$element->setAttribute('class','qa-tag-img');
 				$element->setAttribute('width',qa_opt('plugin_tag_desc_icon_width'));
 				$element->setAttribute('hight',qa_opt('plugin_tag_desc_icon_height'));
@@ -45,12 +45,5 @@ class qa_html_theme_layer extends qa_html_theme_base
 		$taghtml= $html->saveHTML(); 
 		qa_html_theme_base::post_tag_item($taghtml, $class);
 	}	
-	
-		function innerHTML($node) {
-			$ret = '';
-			foreach ($node->childNodes as $node) {
-				$ret .= $node->ownerDocument->saveHTML($node);
-			}
-			return $ret;
-		}
+
 }
