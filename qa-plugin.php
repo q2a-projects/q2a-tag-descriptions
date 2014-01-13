@@ -1,7 +1,7 @@
 <?php
 
 /*
-	Plugin Name: Advenced Tag Descriptions
+	Plugin Name: Advanced Tag Descriptions
 	Plugin URI: https://github.com/Towhidn/q2a-tag-descriptions
 	Plugin Description: Allows tag descriptions with images and titles to be displayed
 	Plugin Version: 1.1.2
