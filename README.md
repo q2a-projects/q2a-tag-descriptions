@@ -5,9 +5,10 @@ this **Question2Answer** plugin allows adding HTML Description to Tag pages, and
 this plugin was originally developed by Gideon Greenspan in [plugin development tutorial](http://www.question2answer.org/plugins-tutorial.php). I just added a few cool features:
 
 ## New Features
-- adding Title to tags(it will use title text instead of description in tag link's title attribute)
+- adding Title to tags(it will use `title` field instead of `description` field in tag's title attribute)
 - adding Icon to tags(icon image will show up inside tag links, it's size can be set in admin options page)
 - it supports HTML in tag description(can be disabled in plugin option page), so you can add images, links, ... in each tag's page
+- it applies same rules in 'tags' page in Q2A
 - css class "qa-tag-description" was added to tag's description container for easy styling
 
 ## Installation
@@ -19,16 +20,17 @@ this plugin was originally developed by Gideon Greenspan in [plugin development 
 
 
 ## Author
-Created by [Gideon Greenspan](http://www.gidgreen.com/)
-Improvements and new features by [Towhid Nategheian](http://TowhidN.com) from [Q2A Themes](http://QA-Themes.com)
+Originally created by [Gideon Greenspan](http://www.gidgreen.com/).
 
-#### Disclaimer
-This is **beta code**. It worked fine for me, but may not work as you expect. if any problems accour get help on http://www.question2answer.org/qa/
+Improvements and new features by [Towhid Nategheian](http://TowhidN.com) from [Q2A Themes](http://QA-Themes.com).
 
-#### copyright
+### Disclaimer
+This is **beta code**. It worked fine for me, but may not work as you expect. if any problems occur get help send an issue in Github or use our [Free Support](http://qa-themes.com/forums/forum/plugins-support) for plugins.
+
+### Copyright
 this plugin and all it's source code is [Copylefted](http://en.wikipedia.org/wiki/Copyleft)
 
-#### About q2A
+### About Q2A
 
 Question2Answer is a free and open source platform for Q&A sites. For more information, visit:
 
