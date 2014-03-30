@@ -26,7 +26,7 @@ class qa_html_theme_layer extends qa_html_theme_base
 		}
 
 		$html = new DOMDocument();
-		$html->loadHTML($taghtml);
+		$html->loadHTML(mb_convert_encoding($taghtml, 'HTML-ENTITIES', 'UTF-8'));
 
 		foreach($html->getElementsByTagName('a') as $a)
         {
@@ -68,7 +68,7 @@ class qa_html_theme_layer extends qa_html_theme_base
 				// add title and icon to each tag
 				$html = new DOMDocument();
 				foreach ($ranking['items'] as &$item) {
-					$html->loadHTML($item['label']);
+					$html->loadHTML(mb_convert_encoding($item['label'], 'HTML-ENTITIES', 'UTF-8'));
 					foreach($html->getElementsByTagName('a') as $a)
 					{
 						if (!empty($plugin_tag_map[$a->nodeValue]['title']))
