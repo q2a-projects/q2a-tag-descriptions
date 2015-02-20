@@ -18,6 +18,8 @@ this plugin was originally developed by Gideon Greenspan in [plugin development 
 3. In Q2A go to **Admin > Layout** add it's widget anywhere you want.
 4. Open any of your tags and click **edit description** in the position you choose in last step, then add content and save it.
 
+### Compatibility
+This plugin is tested with **Question2Answer 1.7 & 1.6** and should work with most older versions too.
 ___
 
 ## Authors
